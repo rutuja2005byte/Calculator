@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="mainDiv">
+        <div class="calcDiv">
+            <div class="screen">
+                <input type="text" id="screenText">
+            </div>
+            <div class="allKeys">
+                <div class="keysBox">
+                    <button onclick="getValue(this)" value="1" class="keys">1</button>
+                    <button onclick="getValue(this)" value="2" class="keys">2</button>
+                    <button onclick="getValue(this)" value="3" class="keys">3</button>
+                    <button onclick="clearScreen()" class="keys">Clear</button>
+                </div>
+                <div class="keysBox">
+                    <button onclick="getValue(this)" value="4" class="keys">4</button>
+                    <button onclick="getValue(this)" value="5" class="keys">5</button>
+                    <button onclick="getValue(this)" value="6" class="keys">6</button>
+                    <button onclick="setOperator(this)" class="keys">+</button>
+                </div>
+                <div class="keysBox">
+                    <button onclick="getValue(this)" value="7" class="keys">7</button>
+                    <button onclick="getValue(this)" value="8" class="keys">8</button>
+                    <button onclick="getValue(this)" value="9" class="keys">9</button>
+                    <button onclick="setOperator(this)" class="keys">-</button>
+                </div>
+                <div class="keysBox">
+                    <button onclick="calculate()" class="keys">=</button>
+                    <button onclick="getValue(this)" value="0" class="keys">0</button>
+                    <button onclick="setOperator(this)" value="/" class="keys">/</button>
+                    <button onclick="setOperator(this)" value="*" class="keys">*</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
