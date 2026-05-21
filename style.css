@@ -9,7 +9,7 @@ body{
     align-items: center;
     justify-content: center;
 }
-/* .mainDiv {
+ /* .mainDiv {
     background-color: rgb(240, 191, 240);
     width:100%;
     height: 100vh;
@@ -19,14 +19,15 @@ body{
 } */
 .calcDiv {
     background-color: rgb(169, 65, 169);
-    width:60vw;
-    height:70vh;
+    width: min(92vw, 420px);
+    height:auto;
     border-radius:20px;
     box-shadow: 7px 7px 15px  rgb(90, 71, 90);
+    padding: 6px;
 }
 .screen{
-    width:100wh;
-    height:15vh;
+    width:100%;
+    height: clamp(56px, 12vh, 90px);
     border-radius: 20px;
     margin: 2px;
     padding-right: 4px;
@@ -34,17 +35,17 @@ body{
 }
 #screenText{
     width: 100%;
-    height: 14vh;
+    height: 100%;
     border-radius: 20px;
     margin: 2px;
     border: none;
     color: #fff;
     text-align: right;
-    font-size:2rem;
+    font-size: clamp(1.4rem, 4vw, 2rem);
     background-color: purple;
 }
 .allKeys{
-    height:50vh;
+    height:auto;
     width:100%;
     margin:2px;
     border-radius:20px;
@@ -54,8 +55,8 @@ body{
     padding-right:4px;
 }
 .keys {
-    width:15vw;
-    height:13vh;
+    width: calc(25% - 4px);
+    height: clamp(56px, 11vh, 86px);
     background-color: purple;
     border:0px solid purple;
     border-radius:20px;
@@ -64,8 +65,21 @@ body{
     align-items: center;
     justify-content: center;
     color:#fff;
-    font-size:2rem;
+    font-size: clamp(1.2rem, 4vw, 2rem);
 }
 .keys:hover {
     transform:translateY(-2px);
+}
+
+@media (max-width: 420px) {
+    .calcDiv {
+        padding: 4px;
+        border-radius: 16px;
+    }
+
+    .keys,
+    .screen,
+    #screenText {
+        border-radius: 14px;
+    }
 }
